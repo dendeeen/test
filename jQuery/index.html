@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<title>jQueryの練習</title>
+	</head>
+	<body style="text-align: center;">
+		<h1>スクロール実験</h1>
+		<p>hello</p>
+		<p>hello</p>
+		<p>hello</p>
+		<p>hello</p>
+		<p>hello</p>
+		<p>hello</p>
+		<p>hello</p>
+		<p>hello</p>
+		<p>hello</p>
+		<p>hello</p>
+		<p>hello</p>
+		<p>hello</p>
+		<p>hello</p>
+		<p>hello</p>
+		<p>hello</p>
+		<p>hello</p>
+		<p>hello</p>
+		<p>hello</p>
+		<p>hello</p>
+		<p>hello</p>
+		<p>hello</p>
+		<p>hello</p>
+		<p>hello</p>
+		<p>hello</p>
+		<p>hello</p>
+		<p>hello</p>
+		<p>hello</p>
+		<div id="back-to-top" style="position: fixed;right: 5px;bottom: 5px;"><a href="#">↑</a></div>
+		<div id="pos" style="position: fixed;left: 5px;bottom: 5px;"></div>
+
+		
+		<script>
+			$(function(){
+              $('#back-to-top').hide();
+
+              $('window').scroll(functon(){
+
+              	$('#pos').text($('this').scrollTop());
+              	if($('this').scrollTop() > 60) {
+              		$('#back-to-top').fadein();
+              	} else {
+              		$('#back-to-top').hide();
+              	}
+              });
+			});
+		</script>
+	</body>
+	
+</html>
